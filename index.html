@@ -37,6 +37,7 @@
                         <th class="col-2 text-center">Ground-truth text</th>
                         <th class="col-2 text-center">Input NAM vibrations</th>
                         <th class="col-1 text-center">Simulated Ground-truth Speech using Cross-Attention</th>
+                        <th class="col-1 text-center">Simulated Ground-truth Speech using StethoSpeech</th>
                         <th class="col-1 text-center">Simulated Ground-truth Speech using LipVoicer (predicted text)</th>
                         <th class="col-1 text-center">Simulated Ground-truth Speech using LipVoicer (ground-truth text)</th>
                         <th class="col-1 text-center">Simulated Ground-truth Speech using DiffNAM (ours)</th>
@@ -50,6 +51,9 @@
                         </td>
                         <td class="text-center">
                             <audio controls src="resources/gt_speech/cross_attention/82_46.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/gt_speech/stethospeech/82_46.wav"></audio>
                         </td>
                         <td class="text-center">
                             <audio controls src="resources/gt_speech/lipvoicer_pred/82_46.wav"></audio>
@@ -71,6 +75,9 @@
                             <audio controls src="resources/gt_speech/cross_attention/7_8.wav"></audio>
                         </td>
                         <td class="text-center">
+                            <audio controls src="resources/gt_speech/stethospeech/7_8.wav"></audio>
+                        </td>
+                        <td class="text-center">
                             <audio controls src="resources/gt_speech/lipvoicer_pred/7_8.wav"></audio>
                         </td>
                         <td class="text-center">
@@ -88,6 +95,9 @@
                         </td>
                         <td class="text-center">
                             <audio controls src="resources/gt_speech/cross_attention/33_12.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/gt_speech/stethospeech/33_12.wav"></audio>
                         </td>
                         <td class="text-center">
                             <audio controls src="resources/gt_speech/lipvoicer_pred/33_12.wav"></audio>
@@ -109,6 +119,9 @@
                             <audio controls src="resources/gt_speech/cross_attention/49_11.wav"></audio>
                         </td>
                         <td class="text-center">
+                            <audio controls src="resources/gt_speech/stethospeech/49_11.wav"></audio>
+                        </td>
+                        <td class="text-center">
                             <audio controls src="resources/gt_speech/lipvoicer_pred/49_11.wav"></audio>
                         </td>
                         <td class="text-center">
@@ -126,6 +139,9 @@
                         </td>
                         <td class="text-center">
                             <audio controls src="resources/gt_speech/cross_attention/49_20.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/gt_speech/stethospeech/49_20.wav"></audio>
                         </td>
                         <td class="text-center">
                             <audio controls src="resources/gt_speech/lipvoicer_pred/49_20.wav"></audio>
@@ -147,6 +163,9 @@
                             <audio controls src="resources/gt_speech/cross_attention/s2_3_27.wav"></audio>
                         </td>
                         <td class="text-center">
+                            <audio controls src="resources/gt_speech/stethospeech/s2_3_27.wav"></audio>
+                        </td>
+                        <td class="text-center">
                             <audio controls src="resources/gt_speech/lipvoicer_pred/s2_3_27.wav"></audio>
                         </td>
                         <td class="text-center">
@@ -164,6 +183,9 @@
                         </td>
                         <td class="text-center">
                             <audio controls src="resources/gt_speech/cross_attention/s2_8_20.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/gt_speech/stethospeech/s2_8_20.wav"></audio>
                         </td>
                         <td class="text-center">
                             <audio controls src="resources/gt_speech/lipvoicer_pred/s2_8_20.wav"></audio>
@@ -185,6 +207,9 @@
                             <audio controls src="resources/gt_speech/cross_attention/s2_8_30.wav"></audio>
                         </td>
                         <td class="text-center">
+                            <audio controls src="resources/gt_speech/stethospeech/s2_8_30.wav"></audio>
+                        </td>
+                        <td class="text-center">
                             <audio controls src="resources/gt_speech/lipvoicer_pred/s2_8_30.wav"></audio>
                         </td>
                         <td class="text-center">
@@ -202,6 +227,9 @@
                         </td>
                         <td class="text-center">
                             <audio controls src="resources/gt_speech/cross_attention/s2_9_7.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/gt_speech/stethospeech/s2_9_7.wav"></audio>
                         </td>
                         <td class="text-center">
                             <audio controls src="resources/gt_speech/lipvoicer_pred/s2_9_7.wav"></audio>
@@ -223,6 +251,9 @@
                             <audio controls src="resources/gt_speech/cross_attention/s2_14_29.wav"></audio>
                         </td>
                         <td class="text-center">
+                            <audio controls src="resources/gt_speech/stethospeech/s2_14_29.wav"></audio>
+                        </td>
+                        <td class="text-center">
                             <audio controls src="resources/gt_speech/lipvoicer_pred/s2_14_29.wav"></audio>
                         </td>
                         <td class="text-center">
@@ -235,6 +266,316 @@
 
                 </tbody>
             </table>
+        </div>
+
+        <div class="d-block p-5">
+        
+            <div class="row p-6"></div>
+            <div class="row">
+                <h3>R2: Evaluating converted speech with existing frameworks and our DiffNAM approach.</h3>
+            </div>
+            <div class="row d-flex table-responsive overflow-auto">
+                <table class="table table-bordered m-3">
+                    <thead>
+                        <tr class="flex-row">
+                            <th class="col-2 text-center">Ground-truth text</th>
+                            <th class="col-2 text-center">Input NAM vibrations</th>
+                            <th class="col-1 text-center">Converted Speech using Cross-Attention</th>
+                            <th class="col-1 text-center">Converted Speech using StethoSpeech</th>
+                            <th class="col-1 text-center">Converted Speech using LipVoicer (predicted text)</th>
+                            <th class="col-1 text-center">Converted Speech using LipVoicer (ground-truth text)</th>
+                            <th class="col-1 text-center">Converted Speech using DiffNAM (ours)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="flex-row">
+                            <td>in all civilized nations, the universal instrument of commerce.</td>
+                            <td class="text-center">
+                                <audio controls src="resources/nams/17_49.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/cross_attention/17_49.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/stethospeech/17_49.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/lipvoicer_pred/17_49.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/lipvoicer_gt/17_49.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/nam_diff/17_49.wav"></audio>
+                            </td>
+                        </tr>
+
+                        <tr class="flex-row">
+                            <td>or may be assessed, so as to leave no doubt concerning either what ought to be paid.</td>
+                            <td class="text-center">
+                                <audio controls src="resources/nams/47_15.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/cross_attention/47_15.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/stethospeech/47_15.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/lipvoicer_pred/47_15.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/lipvoicer_gt/47_15.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/nam_diff/47_15.wav"></audio>
+                            </td>
+                        </tr>
+
+                        <tr class="flex-row">
+                            <td>for the maintenance of the road or of the navigation.</td>
+                            <td class="text-center">
+                                <audio controls src="resources/nams/52_12.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/cross_attention/52_12.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/stethospeech/52_12.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/lipvoicer_pred/52_12.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/lipvoicer_gt/52_12.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/nam_diff/52_12.wav"></audio>
+                            </td>
+                        </tr>
+
+                        <tr class="flex-row">
+                            <td>the highest orders of people are rated according to their rank.</td>
+                            <td class="text-center">
+                                <audio controls src="resources/nams/67_2.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/cross_attention/67_2.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/stethospeech/67_2.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/lipvoicer_pred/67_2.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/lipvoicer_gt/67_2.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/nam_diff/67_2.wav"></audio>
+                            </td>
+                        </tr>
+
+                        <tr class="flex-row">
+                            <td>and in manufacturing art and industry.</td>
+                            <td class="text-center">
+                                <audio controls src="resources/nams/78_5.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/cross_attention/78_5.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/stethospeech/78_5.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/lipvoicer_pred/78_5.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/lipvoicer_gt/78_5.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/nam_diff/78_5.wav"></audio>
+                            </td>
+                        </tr>
+
+                        <tr class="flex-row">
+                            <td>what are the taxes which fall finally upon the rent of the land.</td>
+                            <td class="text-center">
+                                <audio controls src="resources/nams/82_16.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/cross_attention/82_16.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/stethospeech/82_16.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/lipvoicer_pred/82_16.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/lipvoicer_gt/82_16.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/nam_diff/82_16.wav"></audio>
+                            </td>
+                        </tr>
+
+                        <tr class="flex-row">
+                            <td>I have no right to interfere with his work.</td>
+                            <td class="text-center">
+                                <audio controls src="resources/nams/89_5.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/cross_attention/89_5.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/stethospeech/89_5.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/lipvoicer_pred/89_5.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/lipvoicer_gt/89_5.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/nam_diff/89_5.wav"></audio>
+                            </td>
+                        </tr>
+
+                        <tr class="flex-row">
+                            <td>especially as regards the lower case letters.</td>
+                            <td class="text-center">
+                                <audio controls src="resources/nams/s2_1_34.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/cross_attention/s2_1_34.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/stethospeech/s2_1_34.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/lipvoicer_pred/s2_1_34.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/lipvoicer_gt/s2_1_34.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/nam_diff/s2_1_34.wav"></audio>
+                            </td>
+                        </tr>
+
+                        <tr class="flex-row">
+                            <td>because the modern practice is to disregard the relation between the printing and the ornament altogether.</td>
+                            <td class="text-center">
+                                <audio controls src="resources/nams/s2_5_23.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/cross_attention/s2_5_23.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/stethospeech/s2_5_23.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/lipvoicer_pred/s2_5_23.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/lipvoicer_gt/s2_5_23.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/nam_diff/s2_5_23.wav"></audio>
+                            </td>
+                        </tr>
+
+                        <tr class="flex-row">
+                            <td>he had loaded with heavy irons.</td>
+                            <td class="text-center">
+                                <audio controls src="resources/nams/s2_5_51.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/cross_attention/s2_5_51.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/stethospeech/s2_5_51.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/lipvoicer_pred/s2_5_51.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/lipvoicer_gt/s2_5_51.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/nam_diff/s2_5_51.wav"></audio>
+                            </td>
+                        </tr>
+
+                        <tr class="flex-row">
+                            <td>he had loaded with heavy irons.</td>
+                            <td class="text-center">
+                                <audio controls src="resources/nams/s2_11_33.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/cross_attention/s2_11_33.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/stethospeech/s2_11_33.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/lipvoicer_pred/s2_11_33.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/lipvoicer_gt/s2_11_33.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/nam_diff/s2_11_33.wav"></audio>
+                            </td>
+                        </tr>
+
+                        <tr class="flex-row">
+                            <td>ten pence more, and the turn key two shillings.</td>
+                            <td class="text-center">
+                                <audio controls src="resources/nams/s2_13_46.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/cross_attention/s2_13_46.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/stethospeech/s2_13_46.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/lipvoicer_pred/s2_13_46.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/lipvoicer_gt/s2_13_46.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/nam_diff/s2_13_46.wav"></audio>
+                            </td>
+                        </tr>
+
+                        <tr class="flex-row">
+                            <td>had it not been appropriated by the turnkey who winked at this evasion of the rules.</td>
+                            <td class="text-center">
+                                <audio controls src="resources/nams/s2_19_46.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/cross_attention/s2_19_46.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/stethospeech/s2_19_46.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/lipvoicer_pred/s2_19_46.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/lipvoicer_gt/s2_19_46.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/nam_diff/s2_19_46.wav"></audio>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </body>
