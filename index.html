@@ -122,12 +122,153 @@
                 </table>
             </div>
         </div>
+
+        <div class="d-block p-4">
+            <div class="row p-5"></div>
+            <div class="row">
+                <h3>R1: Evaluating simulated ground-truth speech using Whisper speech as input </h3>
+            </div>
+            <div class="row d-flex table-responsive overflow-auto">
+                <table class="table table-bordered m-3">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Ground-truth text</th>
+                            <th class="text-center">Input whisper speech</th>
+                            <th class="text-center">Simulated Ground-truth Speech using a pretrained HuBERT and a vocoder (WER ~ 84.53 - 100.14 %)</th>
+                            <th class="text-center">Simulated Ground-truth Speech using whisper and text aligned with aligner and TTS synthesized (WER ~ 5.84 - 11.23 %)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>this hurtful practice might be discouraged.</td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/whisper/82_46.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/whisper_hub_vocoder_is24/82_46.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/whisper_mfatrained/82_46.wav"></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>and you will perceive that the number of people, of whose industry a part.</td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/whisper/7_8.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/whisper_hub_vocoder_is24/7_8.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/whisper_mfatrained/7_8.wav"></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>If, for the sake of equality, it was thought necessary to lay a tax upon this liquor.</td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/whisper/33_12.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/whisper_hub_vocoder_is24/33_12.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/whisper_mfatrained/33_12.wav"></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>These are in some countries called transit duties.</td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/whisper/49_11.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/whisper_hub_vocoder_is24/49_11.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/whisper_mfatrained/49_11.wav"></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>is that levied by the king of Denmark upon all merchant ships which pass through the Sound.</td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/whisper/49_20.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/whisper_hub_vocoder_is24/49_20.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/whisper_mfatrained/49_20.wav"></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>America has produced a good many showy books.</td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/whisper/s2_3_27.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/whisper_hub_vocoder_is24/s2_3_27.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/whisper_mfatrained/s2_3_27.wav"></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>and in dimensions varying from thirty feet by fifteen to fifteen feet by ten.</td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/whisper/s2_8_20.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/whisper_hub_vocoder_is24/s2_8_20.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/whisper_mfatrained/s2_8_20.wav"></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>near it a grating through which the debtors receive their beer from the neighboring public houses.</td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/whisper/s2_8_30.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/whisper_hub_vocoder_is24/s2_8_30.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/whisper_mfatrained/s2_8_30.wav"></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>three hundred for the kingdom, and seven thousand twenty for Middlesex.</td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/whisper/s2_9_7.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/whisper_hub_vocoder_is24/s2_9_7.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/whisper_mfatrained/s2_9_7.wav"></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>when as many as two hundred visitors have been observed leaving the debtors'.</td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/whisper/s2_14_29.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/whisper_hub_vocoder_is24/s2_14_29.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/whisper_mfatrained/s2_14_29.wav"></audio>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
                         
 
         <div class="d-block p-4">
             <div class="row p-5"></div>
             <div class="row">
-                <h3>R1: Evaluating simulated ground-truth speech with existing frameworks and our DiffNAM approach.</h3>
+                <h3>R2: Evaluating simulated ground-truth speech for NAM to Speech conversion with explored frameworks.</h3>
             </div>
             <div class="row d-flex table-responsive overflow-auto">
                 <table class="table table-bordered m-3">
@@ -135,11 +276,12 @@
                         <tr>
                             <th class="text-center">Ground-truth text</th>
                             <th class="text-center">Input NAM vibrations</th>
-                            <th class="text-center">Simulated Ground-truth Speech using Cross-Attention</th>
-                            <th class="text-center">Simulated Ground-truth Speech using StethoSpeech</th>
-                            <th class="text-center">Simulated Ground-truth Speech using LipVoicer (predicted text)</th>
-                            <th class="text-center">Simulated Ground-truth Speech using LipVoicer (ground-truth text)</th>
-                            <th class="text-center">Simulated Ground-truth Speech using DiffNAM (ours)</th>
+                            <th class="text-center">Method: Cross-Attention (Modalities used: Lip & text) (WER: 62.13 - 67.54 %)</th>
+                            <th class="text-center">Method: NAM and text aligned with aligner and TTS synthesized (Modalities used: NAM & text) (WER: 12.37 - 19.64 %)</th>
+                            <th class="text-center">Method: NAM and text aligned with aligner and TTS synthesized (Modalities used: NAM & text) (speaker-specific training) (WER: 23.81 - 33.62 %)</th>
+                            <th class="text-center">Method: LipVoicer with predicted text in inference (Modalities used: Lip & text) (WER: 39.04 - 49.99 %)</th>
+                            <th class="text-center">Method: LipVoicer with ground-truth text in inference (Modalities used: Lip & text) (WER: 27.01 - 33.94 %)</th>
+                            <th class="text-center">Method: DiffNAM (Modalities used: Lip, NAM & text) (WER: 17.23 - 21.73 %)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -150,6 +292,9 @@
                             </td>
                             <td class="text-center">
                                 <audio controls src="resources/gt_speech/cross_attention/82_46.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/stethospeech_jointtraining2speakers/82_46.wav"></audio>
                             </td>
                             <td class="text-center">
                                 <audio controls src="resources/gt_speech/stethospeech/82_46.wav"></audio>
@@ -171,6 +316,9 @@
                             </td>
                             <td class="text-center">
                                 <audio controls src="resources/gt_speech/cross_attention/7_8.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/stethospeech_jointtraining2speakers/7_8.wav"></audio>
                             </td>
                             <td class="text-center">
                                 <audio controls src="resources/gt_speech/stethospeech/7_8.wav"></audio>
@@ -195,6 +343,9 @@
                                 <audio controls src="resources/gt_speech/cross_attention/33_12.wav"></audio>
                             </td>
                             <td class="text-center">
+                                <audio controls src="resources/gt_speech/stethospeech_jointtraining2speakers/33_12.wav"></audio>
+                            </td>
+                            <td class="text-center">
                                 <audio controls src="resources/gt_speech/stethospeech/33_12.wav"></audio>
                             </td>
                             <td class="text-center">
@@ -215,6 +366,9 @@
                             </td>
                             <td class="text-center">
                                 <audio controls src="resources/gt_speech/cross_attention/49_11.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/stethospeech_jointtraining2speakers/49_11.wav"></audio>
                             </td>
                             <td class="text-center">
                                 <audio controls src="resources/gt_speech/stethospeech/49_11.wav"></audio>
@@ -239,6 +393,9 @@
                                 <audio controls src="resources/gt_speech/cross_attention/49_20.wav"></audio>
                             </td>
                             <td class="text-center">
+                                <audio controls src="resources/gt_speech/stethospeech_jointtraining2speakers/49_20.wav"></audio>
+                            </td>
+                            <td class="text-center">
                                 <audio controls src="resources/gt_speech/stethospeech/49_20.wav"></audio>
                             </td>
                             <td class="text-center">
@@ -259,6 +416,9 @@
                             </td>
                             <td class="text-center">
                                 <audio controls src="resources/gt_speech/cross_attention/s2_3_27.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/stethospeech_jointtraining2speakers/s2_3_27.wav"></audio>
                             </td>
                             <td class="text-center">
                                 <audio controls src="resources/gt_speech/stethospeech/s2_3_27.wav"></audio>
@@ -283,6 +443,9 @@
                                 <audio controls src="resources/gt_speech/cross_attention/s2_8_20.wav"></audio>
                             </td>
                             <td class="text-center">
+                                <audio controls src="resources/gt_speech/stethospeech_jointtraining2speakers/s2_8_20.wav"></audio>
+                            </td>
+                            <td class="text-center">
                                 <audio controls src="resources/gt_speech/stethospeech/s2_8_20.wav"></audio>
                             </td>
                             <td class="text-center">
@@ -303,6 +466,9 @@
                             </td>
                             <td class="text-center">
                                 <audio controls src="resources/gt_speech/cross_attention/s2_8_30.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/gt_speech/stethospeech_jointtraining2speakers/s2_8_30.wav"></audio>
                             </td>
                             <td class="text-center">
                                 <audio controls src="resources/gt_speech/stethospeech/s2_8_30.wav"></audio>
@@ -327,6 +493,9 @@
                                 <audio controls src="resources/gt_speech/cross_attention/s2_9_7.wav"></audio>
                             </td>
                             <td class="text-center">
+                                <audio controls src="resources/gt_speech/stethospeech_jointtraining2speakers/s2_9_7.wav"></audio>
+                            </td>
+                            <td class="text-center">
                                 <audio controls src="resources/gt_speech/stethospeech/s2_9_7.wav"></audio>
                             </td>
                             <td class="text-center">
@@ -340,27 +509,6 @@
                             </td>
                         </tr>
     
-                        <tr class="flex-row">
-                            <td>when as many as two hundred visitors have been observed leaving the debtors'.</td>
-                            <td class="text-center">
-                                <audio controls src="resources/nams/s2_14_29.wav"></audio>
-                            </td>
-                            <td class="text-center">
-                                <audio controls src="resources/gt_speech/cross_attention/s2_14_29.wav"></audio>
-                            </td>
-                            <td class="text-center">
-                                <audio controls src="resources/gt_speech/stethospeech/s2_14_29.wav"></audio>
-                            </td>
-                            <td class="text-center">
-                                <audio controls src="resources/gt_speech/lipvoicer_pred/s2_14_29.wav"></audio>
-                            </td>
-                            <td class="text-center">
-                                <audio controls src="resources/gt_speech/lipvoicer_gt/s2_14_29.wav"></audio>
-                            </td>
-                            <td class="text-center">
-                                <audio controls src="resources/gt_speech/nam_diff/s2_14_29.wav"></audio>
-                            </td>
-                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -369,7 +517,7 @@
         <div class="d-block p-4">
             <div class="row p-5"></div>
             <div class="row">
-                <h3>R2: Evaluating converted speech with existing frameworks and our DiffNAM approach.</h3>
+                <h3>R3: Evaluating converted speech with existing frameworks and our DiffNAM approach.</h3>
             </div>
             <div class="row d-flex table-responsive overflow-auto">
                 <table class="table table-bordered m-3">
