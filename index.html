@@ -134,8 +134,8 @@
                         <tr>
                             <th class="text-center">Ground-truth text</th>
                             <th class="text-center">Input whisper speech (WER ~ 5.54 - 12.97)</th>
-                            <th class="text-center">Simulated Ground-truth Speech using a pretrained HuBERT and a vocoder (WER ~ 84.53 - 100.14 %)</th>
-                            <th class="text-center">Simulated Ground-truth Speech using whisper and text aligned with aligner and TTS synthesized (WER ~ 5.84 - 11.23 %)</th>
+                            <th class="text-center">Pre-trained HuBERT and vocoder (WER ~ 84.53 - 100.14 %)</th>
+                            <th class="text-center">Whisper and text aligned with aligner and TTS synthesized (WER ~ 5.84 - 11.23 %)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -262,13 +262,13 @@
                     <thead>
                         <tr>
                             <th class="text-center">Ground-truth text</th>
-                            <th class="text-center">Input NAM vibrations</th>
-                            <th class="text-center">Method: NAM and text aligned with aligner and TTS synthesized (Modalities used: NAM & text) (Both speaker samples for training) (WER: 12.37 - 19.64)</th>
-                            <th class="text-center">Method: NAM and text aligned with aligner and TTS synthesized (Modalities used: NAM & text) (speaker-specific training) (WER: 23.81 - 33.62)</th>
-                            <th class="text-center">Method: Cross-Attention (Modalities used: Lip & text) (WER: 62.13 - 67.54)</th>
-                            <th class="text-center">Method: LipVoicer with predicted text in inference (Modalities used: Lip & text) (WER: 39.04 - 49.99)</th>
-                            <th class="text-center">Method: LipVoicer with ground-truth text in inference (Modalities used: Lip & text) (WER: 27.01 - 33.94)</th>
-                            <th class="text-center">Method: DiffNAM (Modalities used: Lip, NAM & text) (WER: 17.23 - 21.73)</th>
+                            <th class="text-center">Input NAM vibrations (WER: 192.77)</th>
+                            <th class="text-center">NAM and text aligned with aligner and TTS synthesized (Modalities used: NAM & text) (Both speaker samples for training) (WER: 12.37 - 19.64)</th>
+                            <th class="text-center">NAM and text aligned with aligner and TTS synthesized (Modalities used: NAM & text) (speaker-specific training) (WER: 23.81 - 33.62)</th>
+                            <th class="text-center">Cross-Attention (Modalities used: Lip & text) (WER: 62.13 - 67.54)</th>
+                            <th class="text-center">LipVoicer with predicted text in inference (Modalities used: Lip & text) (WER: 39.04 - 49.99)</th>
+                            <th class="text-center">LipVoicer with ground-truth text in inference (Modalities used: Lip & text) (WER: 27.01 - 33.94)</th>
+                            <th class="text-center">DiffNAM (Modalities used: Lip, NAM & text) (WER: 17.23 - 21.73)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -504,21 +504,22 @@
         <div class="d-block p-4">
             <div class="row p-5"></div>
             <div class="row">
-                <h3>R3: Converted speech samples by training Seq2Seq using simulated ground-truth speech from R2.</h3>
+                <h3>R3: Converted speech samples by training Seq2Seq using simulated ground-truth speech from R1 and R2.</h3>
             </div>
             <div class="row d-flex table-responsive overflow-auto">
                 <table class="table table-bordered m-3">
                     <thead>
                         <tr>
                             <th class="text-center">Ground-truth text</th>
-                            <th class="text-center">Input NAM vibrations (WER ~ )</th>
-                            <!-- <th class="text-center">Method: NAM and text aligned with aligner and TTS synthesized (Both speaker samples for training) (WER ~ 26.38 - 32.67)</th> -->
-                            <th class="text-center">Method: NAM and text aligned with aligner and TTS synthesized (speaker-specific training) (WER ~ 56.65 - 69.45)</th>
-                            <th class="text-center">Method: Cross-Attention (WER ~ 87.98 - 93.04)</th>
-                            <th class="text-center">Method: LipVoicer (predicted text) (WER ~ 74.51 - 79.46)</th>
-                            <th class="text-center">Method: LipVoicer (ground-truth text) (WER ~ 54.11 - 59.66)</th>
-                            <th class="text-center">Method: Mspec-Net (WER ~ 141.23 - 156.19) </th>
+                            <th class="text-center">Input NAM vibrations (WER ~ 192.77)</th>
+                            <th class="text-center">Method: Whisper and text aligned with aligner and TTS synthesized (WER ~ 15.21 - 25.69)</th>
+                            <th class="text-center">Method: NAM and text aligned with aligner and TTS synthesized (WER ~ 26.38 - 32.61)</th>
                             <th class="text-center">Method: DiffNAM (WER ~ 32.39 - 38.94)</th>
+                            <th class="text-center">Method: LipVoicer (ground-truth text) (WER ~ 54.11 - 59.66)</th>
+                            <th class="text-center">Method: LipVoicer (predicted text) (WER ~ 74.51 - 79.46)</th>
+                            <th class="text-center">Method: Cross-Attention (WER ~ 87.98 - 93.04)</th>
+                            <th class="text-center">Method: Mspec-Net (WER ~ 141.23 - 156.19) </th>
+                            
                         </tr>
                     </thead>
                     <tbody>
@@ -528,22 +529,25 @@
                                 <audio controls src="resources/nams/47_15.wav"></audio>
                             </td>
                             <td class="text-center">
+                                <audio controls src="resources/final_speech/whispermfa_jointtrainedmfa/47_15.wav"></audio>
+                            </td>
+                            <td class="text-center">
                                 <audio controls src="resources/final_speech/stethospeech/47_15.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/final_speech/cross_attention/47_15.wav"></audio>
-                            </td>
-                            <td class="text-center">
-                                <audio controls src="resources/final_speech/lipvoicer_pred/47_15.wav"></audio>
+                                <audio controls src="resources/final_speech/nam_diff/47_15.wav"></audio>
                             </td>
                             <td class="text-center">
                                 <audio controls src="resources/final_speech/lipvoicer_gt/47_15.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/final_speech/mspecnet/47_15_gen.wav"></audio>
+                                <audio controls src="resources/final_speech/lipvoicer_pred/47_15.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/final_speech/nam_diff/47_15.wav"></audio>
+                                <audio controls src="resources/final_speech/cross_attention/47_15.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/mspecnet/47_15_gen.wav"></audio>
                             </td>
                         </tr>
 
@@ -553,22 +557,25 @@
                                 <audio controls src="resources/nams/52_12.wav"></audio>
                             </td>
                             <td class="text-center">
+                                <audio controls src="resources/final_speech/whispermfa_jointtrainedmfa/52_12.wav"></audio>
+                            </td>
+                            <td class="text-center">
                                 <audio controls src="resources/final_speech/stethospeech/52_12.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/final_speech/cross_attention/52_12.wav"></audio>
-                            </td>
-                            <td class="text-center">
-                                <audio controls src="resources/final_speech/lipvoicer_pred/52_12.wav"></audio>
+                                <audio controls src="resources/final_speech/nam_diff/52_12.wav"></audio>
                             </td>
                             <td class="text-center">
                                 <audio controls src="resources/final_speech/lipvoicer_gt/52_12.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/final_speech/mspecnet/52_12_gen.wav"></audio>
+                                <audio controls src="resources/final_speech/lipvoicer_pred/52_12.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/final_speech/nam_diff/52_12.wav"></audio>
+                                <audio controls src="resources/final_speech/cross_attention/52_12.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/mspecnet/52_12_gen.wav"></audio>
                             </td>
                         </tr>
 
@@ -578,22 +585,25 @@
                                 <audio controls src="resources/nams/78_5.wav"></audio>
                             </td>
                             <td class="text-center">
+                                <audio controls src="resources/final_speech/whispermfa_jointtrainedmfa/78_5.wav"></audio>
+                            </td>
+                            <td class="text-center">
                                 <audio controls src="resources/final_speech/stethospeech/78_5.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/final_speech/cross_attention/78_5.wav"></audio>
-                            </td>
-                            <td class="text-center">
-                                <audio controls src="resources/final_speech/lipvoicer_pred/78_5.wav"></audio>
+                                <audio controls src="resources/final_speech/nam_diff/78_5.wav"></audio>
                             </td>
                             <td class="text-center">
                                 <audio controls src="resources/final_speech/lipvoicer_gt/78_5.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/final_speech/mspecnet/78_5_gen.wav"></audio>
+                                <audio controls src="resources/final_speech/lipvoicer_pred/78_5.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/final_speech/nam_diff/78_5.wav"></audio>
+                                <audio controls src="resources/final_speech/cross_attention/78_5.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/mspecnet/78_5_gen.wav"></audio>
                             </td>
                         </tr>
 
@@ -603,22 +613,25 @@
                                 <audio controls src="resources/nams/s2_1_34.wav"></audio>
                             </td>
                             <td class="text-center">
+                                <audio controls src="resources/final_speech/whispermfa_jointtrainedmfa/s2_1_34.wav"></audio>
+                            </td>
+                            <td class="text-center">
                                 <audio controls src="resources/final_speech/stethospeech/s2_1_34.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/final_speech/cross_attention/s2_1_34.wav"></audio>
-                            </td>
-                            <td class="text-center">
-                                <audio controls src="resources/final_speech/lipvoicer_pred/s2_1_34.wav"></audio>
+                                <audio controls src="resources/final_speech/nam_diff/s2_1_34.wav"></audio>
                             </td>
                             <td class="text-center">
                                 <audio controls src="resources/final_speech/lipvoicer_gt/s2_1_34.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/final_speech/mspecnet/s2_1_34_gen.wav"></audio>
+                                <audio controls src="resources/final_speech/lipvoicer_pred/s2_1_34.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/final_speech/nam_diff/s2_1_34.wav"></audio>
+                                <audio controls src="resources/final_speech/cross_attention/s2_1_34.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/mspecnet/s2_1_34_gen.wav"></audio>
                             </td>
                         </tr>
     
@@ -628,47 +641,25 @@
                                 <audio controls src="resources/nams/82_16.wav"></audio>
                             </td>
                             <td class="text-center">
+                                <audio controls src="resources/final_speech/whispermfa_jointtrainedmfa/82_16.wav"></audio>
+                            </td>
+                            <td class="text-center">
                                 <audio controls src="resources/final_speech/stethospeech/82_16.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/final_speech/cross_attention/82_16.wav"></audio>
-                            </td>
-                            <td class="text-center">
-                                <audio controls src="resources/final_speech/lipvoicer_pred/82_16.wav"></audio>
+                                <audio controls src="resources/final_speech/nam_diff/82_16.wav"></audio>
                             </td>
                             <td class="text-center">
                                 <audio controls src="resources/final_speech/lipvoicer_gt/82_16.wav"></audio>
                             </td>
                             <td class="text-center">
+                                <audio controls src="resources/final_speech/lipvoicer_pred/82_16.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/cross_attention/82_16.wav"></audio>
+                            </td>
+                            <td class="text-center">
                                 <audio controls src="resources/final_speech/mspecnet/82_16_gen.wav"></audio>
-                            </td>
-                            <td class="text-center">
-                                <audio controls src="resources/final_speech/nam_diff/82_16.wav"></audio>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>in all civilized nations, the universal instrument of commerce.</td>
-                            <td class="text-center">
-                                <audio controls src="resources/nams/17_49.wav"></audio>
-                            </td>
-                            <td class="text-center">
-                                <audio controls src="resources/final_speech/stethospeech/17_49.wav"></audio>
-                            </td>
-                            <td class="text-center">
-                                <audio controls src="resources/final_speech/cross_attention/17_49.wav"></audio>
-                            </td>
-                            <td class="text-center">
-                                <audio controls src="resources/final_speech/lipvoicer_pred/17_49.wav"></audio>
-                            </td>
-                            <td class="text-center">
-                                <audio controls src="resources/final_speech/lipvoicer_gt/17_49.wav"></audio>
-                            </td>
-                            <td class="text-center">
-                                <audio controls src="resources/final_speech/mspecnet/17_49_gen.wav"></audio>
-                            </td>
-                            <td class="text-center">
-                                <audio controls src="resources/final_speech/nam_diff/17_49.wav"></audio>
                             </td>
                         </tr>
     
@@ -678,22 +669,25 @@
                                 <audio controls src="resources/nams/67_2.wav"></audio>
                             </td>
                             <td class="text-center">
+                                <audio controls src="resources/final_speech/whispermfa_jointtrainedmfa/67_2.wav"></audio>
+                            </td>
+                            <td class="text-center">
                                 <audio controls src="resources/final_speech/stethospeech/67_2.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/final_speech/cross_attention/67_2.wav"></audio>
-                            </td>
-                            <td class="text-center">
-                                <audio controls src="resources/final_speech/lipvoicer_pred/67_2.wav"></audio>
+                                <audio controls src="resources/final_speech/nam_diff/67_2.wav"></audio>
                             </td>
                             <td class="text-center">
                                 <audio controls src="resources/final_speech/lipvoicer_gt/67_2.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/final_speech/mspecnet/67_2_gen.wav"></audio>
+                                <audio controls src="resources/final_speech/lipvoicer_pred/67_2.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/final_speech/nam_diff/67_2.wav"></audio>
+                                <audio controls src="resources/final_speech/cross_attention/67_2.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/mspecnet/67_2_gen.wav"></audio>
                             </td>
                         </tr>
     
@@ -703,22 +697,25 @@
                                 <audio controls src="resources/nams/89_5.wav"></audio>
                             </td>
                             <td class="text-center">
+                                <audio controls src="resources/final_speech/whispermfa_jointtrainedmfa/89_5.wav"></audio>
+                            </td>
+                            <td class="text-center">
                                 <audio controls src="resources/final_speech/stethospeech/89_5.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/final_speech/cross_attention/89_5.wav"></audio>
-                            </td>
-                            <td class="text-center">
-                                <audio controls src="resources/final_speech/lipvoicer_pred/89_5.wav"></audio>
+                                <audio controls src="resources/final_speech/nam_diff/89_5.wav"></audio>
                             </td>
                             <td class="text-center">
                                 <audio controls src="resources/final_speech/lipvoicer_gt/89_5.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/final_speech/mspecnet/89_5_gen.wav"></audio>
+                                <audio controls src="resources/final_speech/lipvoicer_pred/89_5.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/final_speech/nam_diff/89_5.wav"></audio>
+                                <audio controls src="resources/final_speech/cross_attention/89_5.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/mspecnet/89_5_gen.wav"></audio>
                             </td>
                         </tr>
     
@@ -728,22 +725,25 @@
                                 <audio controls src="resources/nams/s2_5_51.wav"></audio>
                             </td>
                             <td class="text-center">
+                                <audio controls src="resources/final_speech/whispermfa_jointtrainedmfa/s2_5_51.wav"></audio>
+                            </td>
+                            <td class="text-center">
                                 <audio controls src="resources/final_speech/stethospeech/s2_5_51.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/final_speech/cross_attention/s2_5_51.wav"></audio>
-                            </td>
-                            <td class="text-center">
-                                <audio controls src="resources/final_speech/lipvoicer_pred/s2_5_51.wav"></audio>
+                                <audio controls src="resources/final_speech/nam_diff/s2_5_51.wav"></audio>
                             </td>
                             <td class="text-center">
                                 <audio controls src="resources/final_speech/lipvoicer_gt/s2_5_51.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/final_speech/mspecnet/s2_5_51_gen.wav"></audio>
+                                <audio controls src="resources/final_speech/lipvoicer_pred/s2_5_51.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/final_speech/nam_diff/s2_5_51.wav"></audio>
+                                <audio controls src="resources/final_speech/cross_attention/s2_5_51.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/mspecnet/s2_5_51_gen.wav"></audio>
                             </td>
                         </tr>
     
@@ -753,22 +753,25 @@
                                 <audio controls src="resources/nams/s2_11_33.wav"></audio>
                             </td>
                             <td class="text-center">
+                                <audio controls src="resources/final_speech/whispermfa_jointtrainedmfa/s2_11_33.wav"></audio>
+                            </td>
+                            <td class="text-center">
                                 <audio controls src="resources/final_speech/stethospeech/s2_11_33.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/final_speech/cross_attention/s2_11_33.wav"></audio>
-                            </td>
-                            <td class="text-center">
-                                <audio controls src="resources/final_speech/lipvoicer_pred/s2_11_33.wav"></audio>
+                                <audio controls src="resources/final_speech/nam_diff/s2_11_33.wav"></audio>
                             </td>
                             <td class="text-center">
                                 <audio controls src="resources/final_speech/lipvoicer_gt/s2_11_33.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/final_speech/mspecnet/s2_11_33_gen.wav"></audio>
+                                <audio controls src="resources/final_speech/lipvoicer_pred/s2_11_33.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/final_speech/nam_diff/s2_11_33.wav"></audio>
+                                <audio controls src="resources/final_speech/cross_attention/s2_11_33.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/mspecnet/s2_11_33_gen.wav"></audio>
                             </td>
                         </tr>
     
@@ -778,22 +781,25 @@
                                 <audio controls src="resources/nams/s2_13_46.wav"></audio>
                             </td>
                             <td class="text-center">
+                                <audio controls src="resources/final_speech/whispermfa_jointtrainedmfa/s2_13_46.wav"></audio>
+                            </td>
+                            <td class="text-center">
                                 <audio controls src="resources/final_speech/stethospeech/s2_13_46.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/final_speech/cross_attention/s2_13_46.wav"></audio>
-                            </td>
-                            <td class="text-center">
-                                <audio controls src="resources/final_speech/lipvoicer_pred/s2_13_46.wav"></audio>
+                                <audio controls src="resources/final_speech/nam_diff/s2_13_46.wav"></audio>
                             </td>
                             <td class="text-center">
                                 <audio controls src="resources/final_speech/lipvoicer_gt/s2_13_46.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/final_speech/mspecnet/s2_13_46_gen.wav"></audio>
+                                <audio controls src="resources/final_speech/lipvoicer_pred/s2_13_46.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/final_speech/nam_diff/s2_13_46.wav"></audio>
+                                <audio controls src="resources/final_speech/cross_attention/s2_13_46.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/mspecnet/s2_13_46_gen.wav"></audio>
                             </td>
                         </tr>
     
@@ -803,22 +809,25 @@
                                 <audio controls src="resources/nams/s2_19_46.wav"></audio>
                             </td>
                             <td class="text-center">
+                                <audio controls src="resources/final_speech/whispermfa_jointtrainedmfa/s2_19_46.wav"></audio>
+                            </td>
+                            <td class="text-center">
                                 <audio controls src="resources/final_speech/stethospeech/s2_19_46.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/final_speech/cross_attention/s2_19_46.wav"></audio>
-                            </td>
-                            <td class="text-center">
-                                <audio controls src="resources/final_speech/lipvoicer_pred/s2_19_46.wav"></audio>
+                                <audio controls src="resources/final_speech/nam_diff/s2_19_46.wav"></audio>
                             </td>
                             <td class="text-center">
                                 <audio controls src="resources/final_speech/lipvoicer_gt/s2_19_46.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/final_speech/mspecnet/s2_19_46_gen.wav"></audio>
+                                <audio controls src="resources/final_speech/lipvoicer_pred/s2_19_46.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/final_speech/nam_diff/s2_19_46.wav"></audio>
+                                <audio controls src="resources/final_speech/cross_attention/s2_19_46.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/final_speech/mspecnet/s2_19_46_gen.wav"></audio>
                             </td>
                         </tr>
                     </tbody>
