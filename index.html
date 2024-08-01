@@ -126,7 +126,53 @@
         <div class="d-block p-4">
             <div class="row p-5"></div>
             <div class="row">
-                <h3>R1: Simulated ground-truth speech using Whisper speech and text as input </h3>
+                <h3>R1: Simulated ground-truth speech using Whisper speech and text as input for CSTR NAM TIMIT Plus Corpus </h3>
+            </div>
+            <div class="row d-flex table-responsive overflow-auto">
+                <table class="table table-bordered m-3">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Ground-truth text</th>
+                            <th class="text-center">Input whisper speech (WER: 1.07)</th>
+                            <th class="text-center">Pre-trained HuBERT and vocoder (WER:23.77)</th>
+                            <th class="text-center">Whisper and text aligned with aligner and TTS synthesized (WER: 41.07)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>but it was for charity just a bit of fun.</td>
+                            <td class="text-center">
+                                <audio controls src="resources/cstr_whisper_gt_speech/input_whisper/380.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/cstr_whisper_gt_speech/hub_voc/380.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/cstr_whisper_gt_speech/mfa_tts/023.wav"></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>if the red of the 2nd bow falls upon the green of the 1st the result is to give a bow with an abnormally wide yellow band since red and green light when mixed form yellow.</td>
+                            <td class="text-center">
+                                <audio controls src="resources/cstr_whisper_gt_speech/input_whisper/023.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/cstr_whisper_gt_speech/hub_voc/023.wav"></audio>
+                            </td>
+                            <td class="text-center">
+                                <audio controls src="resources/cstr_whisper_gt_speech/mfa_tts/023.wav"></audio>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+                        
+
+        <div class="d-block p-4">
+            <div class="row p-5"></div>
+            <div class="row">
+                <h3>R2: Simulated ground-truth speech using Whisper speech and text as input </h3>
             </div>
             <div class="row d-flex table-responsive overflow-auto">
                 <table class="table table-bordered m-3">
@@ -134,8 +180,8 @@
                         <tr>
                             <th class="text-center">Ground-truth text</th>
                             <th class="text-center">Input whisper speech (WER ~ 5.54 - 12.97)</th>
-                            <th class="text-center">Pre-trained HuBERT and vocoder (WER ~ 84.53 - 100.14 %)</th>
-                            <th class="text-center">Whisper and text aligned with aligner and TTS synthesized (WER ~ 5.84 - 11.23 %)</th>
+                            <th class="text-center">Pre-trained HuBERT and vocoder (WER ~ 84.53 - 100.14)</th>
+                            <th class="text-center">Whisper and text aligned with aligner and TTS synthesized (WER ~ 5.84 - 11.23)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -255,7 +301,7 @@
         <div class="d-block p-4">
             <div class="row p-5"></div>
             <div class="row">
-                <h3>R2: Simulated ground-truth speech using NAM / Lip and text as input.</h3>
+                <h3>R3: Simulated ground-truth speech using NAM / Lip and text as input.</h3>
             </div>
             <div class="row d-flex table-responsive overflow-auto">
                 <table class="table table-bordered m-3">
@@ -505,7 +551,7 @@
         <div class="d-block p-4">
             <div class="row p-5"></div>
             <div class="row">
-                <h3>R3: Converted speech samples by training Seq2Seq using simulated ground-truth speech from R1 and R2.</h3>
+                <h3>R4: Converted speech samples by training Seq2Seq using simulated ground-truth speech from R2 and R3.</h3>
             </div>
             <div class="row d-flex table-responsive overflow-auto">
                 <table class="table table-bordered m-3">
