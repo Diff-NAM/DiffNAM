@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#712cf9">
-    <title>MRI2Speech: Speech Synthesis from Articulatory Movements Recorded by Real-time MRI</title>
+    <title>DiffNAM: A Diffusion Method for High-Fidelity Speech Generation via Stethoscopic Microphones</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
     <style>
@@ -95,7 +95,7 @@
         <div class="table-section">
             <h3>Table of Contents</h3>
             <ul>
-                <li><a href="#section1">Multi-NAM dataset</a></li>
+                <li><a href="#section1">MultiNAM dataset</a></li>
                 <li><a href="#section2">Samples from our proposed dataset.</a></li>
                 <li><a href="#section3">R1: Simulated ground-truth speech using Whisper speech and text as input for CSTR NAM TIMIT Plus corpus</a></li>
                 <li><a href="#section4">R2: Simulated ground-truth speech using Whisper speech and text as input for our proposed corpus
@@ -109,104 +109,121 @@
 
         <!-- Dataset Section -->
         <div class="dataset-section">
-            <a href="https://drive.google.com/drive/folders/1HaGjhYZGPJhTI1BeL5UatodKE8XeSr6r?usp=drive_link" title="Link to Dataset">Link to Dataset</a>
+            <h3>MultiNAM Dataset</h3>
+            <p>
+                Explore our dataset containing paired NAM, whisper, video, and text data:
+            </p>
+            <a href="https://drive.google.com/drive/folders/1HaGjhYZGPJhTI1BeL5UatodKE8XeSr6r?usp=drive_link" class="btn btn-primary" target="_blank" title="Link to Dataset">
+                Access the MultiNAM Dataset
+            </a>
         </div>
 
 
-        <div class="row">
-            <h3>Samples from our proposed dataset.</h3>
+        <div class="dataset-samples-section my-5">
+            <div class="row">
+                <h3 class="text-center">Samples from Our Proposed Dataset</h3>
+            </div>
+            <div class="row table-responsive">
+                <table class="table table-bordered text-center align-middle">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Text</th>
+                            <th>Video</th>
+                            <th>Lip Video</th>
+                            <th>NAM</th>
+                            <th>Whisper</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                They could, when they exerted themselves, make among them about twelve pounds of pins in a day.
+                            </td>
+                            <td>
+                                <video width="320" height="240" controls>
+                                    <source src="resources/dataset/video/3_26.mp4" type="video/mp4">
+                                </video>
+                            </td>
+                            <td>
+                                <video width="320" height="240" controls>
+                                    <source src="resources/dataset/lip/3_26.mp4" type="video/mp4">
+                                </video>
+                            </td>
+                            <td>
+                                <audio controls src="resources/dataset/nams/3_26.wav"></audio>
+                            </td>
+                            <td>
+                                <audio controls src="resources/dataset/whisper/3_26.wav"></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                And there is at this day a village in Scotland, where it is not uncommon.
+                            </td>
+                            <td>
+                                <video width="320" height="240" controls>
+                                    <source src="resources/dataset/video/15_34.mp4" type="video/mp4">
+                                </video>
+                            </td>
+                            <td>
+                                <video width="320" height="240" controls>
+                                    <source src="resources/dataset/lip/15_34.mp4" type="video/mp4">
+                                </video>
+                            </td>
+                            <td>
+                                <audio controls src="resources/dataset/nams/15_34.wav"></audio>
+                            </td>
+                            <td>
+                                <audio controls src="resources/dataset/whisper/15_34.wav"></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Gate to the last was the debtors' prison for freemen of the city of London.
+                            </td>
+                            <td>
+                                <video width="320" height="240" controls>
+                                    <source src="resources/dataset/video/s2_13_1.mp4" type="video/mp4">
+                                </video>
+                            </td>
+                            <td>
+                                <video width="320" height="240" controls>
+                                    <source src="resources/dataset/lip/s2_13_1.mp4" type="video/mp4">
+                                </video>
+                            </td>
+                            <td>
+                                <audio controls src="resources/dataset/nams/s2_13_1.wav"></audio>
+                            </td>
+                            <td>
+                                <audio controls src="resources/dataset/whisper/s2_13_1.wav"></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                In England about this time, an attempt was made.
+                            </td>
+                            <td>
+                                <video width="320" height="240" controls>
+                                    <source src="resources/dataset/video/s2_2_36.mp4" type="video/mp4">
+                                </video>
+                            </td>
+                            <td>
+                                <video width="320" height="240" controls>
+                                    <source src="resources/dataset/lip/s2_2_36.mp4" type="video/mp4">
+                                </video>
+                            </td>
+                            <td>
+                                <audio controls src="resources/dataset/nams/s2_2_36.wav"></audio>
+                            </td>
+                            <td>
+                                <audio controls src="resources/dataset/whisper/s2_2_36.wav"></audio>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <div class="row d-flex table-responsive overflow-auto">
-            <table class="table table-bordered m-3">
-                <thead>
-                    <tr>
-                        <th class="text-center">Text</th>
-                        <th class="text-center">Video</th>
-                        <th class="text-center">Lip Video</th>
-                        <th class="text-center">NAM</th>
-                        <th class="text-center">Whisper</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td> they could, when they exerted themselves, make among them about twelve pounds of pins in a day.</td>
-                        <td class="text-center">
-                            <video width="320" height="240" controls>
-                                <source src="resources/dataset/video/3_26.mp4" type="video/mp4">
-                            </video>
-                        </td>
-                        <td class="text-center">
-                            <video width="320" height="240" controls>
-                                <source src="resources/dataset/lip/3_26.mp4" type="video/mp4">
-                            </video>
-                        </td>
-                        <td class="text-center">
-                            <audio controls src="resources/dataset/nams/3_26.wav"></audio>
-                        </td>
-                        <td class="text-center">
-                            <audio controls src="resources/dataset/whisper/3_26.wav"></audio>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td> and there is at this day a village in Scotland, where it is not uncommon.</td>
-                        <td class="text-center">
-                            <video width="320" height="240" controls>
-                                <source src="resources/dataset/video/15_34.mp4" type="video/mp4">
-                            </video>
-                        </td>
-                        <td class="text-center">
-                            <video width="320" height="240" controls>
-                                <source src="resources/dataset/lip/15_34.mp4" type="video/mp4">
-                            </video>
-                        </td>
-                        <td class="text-center">
-                            <audio controls src="resources/dataset/nams/15_34.wav"></audio>
-                        </td>
-                        <td class="text-center">
-                            <audio controls src="resources/dataset/whisper/15_34.wav"></audio>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td> gate to the last was the debtors' prison for freemen of the city of London.</td>
-                        <td class="text-center">
-                            <video width="320" height="240" controls>
-                                <source src="resources/dataset/video/s2_13_1.mp4" type="video/mp4">
-                            </video>
-                        </td>
-                        <td class="text-center">
-                            <video width="320" height="240" controls>
-                                <source src="resources/dataset/lip/s2_13_1.mp4" type="video/mp4">
-                            </video>
-                        </td>
-                        <td class="text-center">
-                            <audio controls src="resources/dataset/nams/s2_13_1.wav"></audio>
-                        </td>
-                        <td class="text-center">
-                            <audio controls src="resources/dataset/whisper/s2_13_1.wav"></audio>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td> In England about this time, an attempt was made.</td>
-                        <td class="text-center">
-                            <video width="320" height="240" controls>
-                                <source src="resources/dataset/video/s2_2_36.mp4" type="video/mp4">
-                            </video>
-                        </td>
-                        <td class="text-center">
-                            <video width="320" height="240" controls>
-                                <source src="resources/dataset/lip/s2_2_36.mp4" type="video/mp4">
-                            </video>
-                        </td>
-                        <td class="text-center">
-                            <audio controls src="resources/dataset/nams/s2_2_36.wav"></audio>
-                        </td>
-                        <td class="text-center">
-                            <audio controls src="resources/dataset/whisper/s2_2_36.wav"></audio>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        
 
         <div class="d-block p-4">
             <div class="row p-5"></div>
