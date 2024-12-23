@@ -6,121 +6,206 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#712cf9">
-    <title>Document</title>
+    <title>MRI2Speech: Speech Synthesis from Articulatory Movements Recorded by Real-time MRI</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .title-section {
+            background-color: #712cf9;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .author-section,
+        .accepted-section {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .author-info p {
+            font-size: 1.1rem;
+            margin-bottom: 0;
+        }
+
+        .abstract-section,
+        .proposed-method-section,
+        .table-section {
+            margin: 20px 0;
+        }
+
+        .table-section h3 {
+            margin-bottom: 20px;
+        }
+
+        .figure img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .table {
+            margin: auto;
+            width: 90%;
+        }
+    </style>
 </head>
 
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
-    <div class="container-fluid p-1">
-        <div class="row p-2">
-            <h1 class="display-3 text-lg-center">
+    <div class="container-fluid">
+        <!-- Title Section -->
+        <div class="title-section">
+            <h1 class="display-4">
                 DiffNAM: A Diffusion Method for High-Fidelity Speech Generation via Stethoscopic Microphones
             </h1>
         </div>
-        <div class="row p-3"></div>
+
+        <!-- Author Section -->
+        <div class="author-section">
+            <div class="author-info">
+                <p class="lead">
+                    Neil Shah<sup>1,2</sup>, Shirish Karande<sup>2</sup>, Vineet Gandhi<sup>1</sup>
+                </p>
+                <p><sup>1</sup>International Institute of Information Technology, Hyderabad, India</p>
+                <p><sup>2</sup>TCS Research, Pune, India</p>
+            </div>
+        </div>
+
+        <!-- Acceptance Section -->
+        <div class="accepted-section">
+            <h4>Accepted at IEEE ICASSP 2025</h4>
+            <p>International Conference on Acoustics, Speech, and Signal Processing</p>
+            <p>Hyderabad, India</p>
+        </div>
+
+        <!-- Abstract Section -->
+        <div class="abstract-section">
+            <h3>Abstract:</h3>
+            <p class="fs-5">
+                Current Non-Audible Murmur (NAM)-to-speech techniques rely on voice cloning to simulate ground-truth speech from paired whispers. However, the simulated speech often lacks intelligibility and fails to generalize well across different speakers. To address this issue, we focus on learning phoneme-level alignments from paired whispers and text and employ a Text-to-Speech (TTS) system to synthesize the ground-truth. To reduce dependence on whispers, we learn phoneme alignments directly from NAMs, though the quality is constrained by the available training data. To further mitigate reliance on NAM/whisper data for ground-truth simulation, we propose incorporating the lip modality to infer speech and introduce a novel diffusion-based method that leverages recent advancements in lip-to-speech technology. Additionally, we release the MultiNAM dataset with over 7.96 hours of paired NAM, whisper, video, and text data from two speakers and benchmark all methods on this dataset.
+            </p>
+        </div>
+
+        <!-- Table of Contents -->
+        <div class="table-section">
+            <h3>Table of Contents</h3>
+            <ul>
+                <li><a href="#section1">Multi-NAM dataset</a></li>
+                <li><a href="#section2">Samples from our proposed dataset.</a></li>
+                <li><a href="#section3">R1: Simulated ground-truth speech using Whisper speech and text as input for CSTR NAM TIMIT Plus corpus</a></li>
+                <li><a href="#section4">R2: Simulated ground-truth speech using Whisper speech and text as input for our proposed corpus
+                </a></li>
+                <li><a href="#section5">R3: Simulated ground-truth speech using NAM / Lip and text as input for our proposed corpus.
+                </a></li>
+                <li><a href="#section6">R4: Converted speech samples by training Seq2Seq using simulated ground-truth speech from R2 and R3 for our proposed corpus..
+                </a></li>
+            </ul>
+        </div>
+
+        <!-- Dataset Section -->
+        <div class="dataset-section">
+            <a href="https://drive.google.com/drive/folders/1HaGjhYZGPJhTI1BeL5UatodKE8XeSr6r?usp=drive_link" title="Link to Dataset">Link to Dataset</a>
+        </div>
 
 
-        <div class="d-block p-4">
-            <div class="row p-5"></div>
-            <div class="row">
-                <a href="https://drive.google.com/drive/folders/1HaGjhYZGPJhTI1BeL5UatodKE8XeSr6r?usp=drive_link" title="Link to Dataset">Link to Dataset</a>
-            </div>
-            <div class="row">
-                <h3>Samples from our proposed dataset.</h3>
-            </div>
-            <div class="row d-flex table-responsive overflow-auto">
-                <table class="table table-bordered m-3">
-                    <thead>
-                        <tr>
-                            <th class="text-center">Text</th>
-                            <th class="text-center">Video</th>
-                            <th class="text-center">Lip Video</th>
-                            <th class="text-center">NAM</th>
-                            <th class="text-center">Whisper</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td> they could, when they exerted themselves, make among them about twelve pounds of pins in a day.</td>
-                            <td class="text-center">
-                                <video width="320" height="240" controls>
-                                    <source src="resources/dataset/video/3_26.mp4" type="video/mp4">
-                                </video>
-                            </td>
-                            <td class="text-center">
-                                <video width="320" height="240" controls>
-                                    <source src="resources/dataset/lip/3_26.mp4" type="video/mp4">
-                                </video>
-                            </td>
-                            <td class="text-center">
-                                <audio controls src="resources/dataset/nams/3_26.wav"></audio>
-                            </td>
-                            <td class="text-center">
-                                <audio controls src="resources/dataset/whisper/3_26.wav"></audio>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td> and there is at this day a village in Scotland, where it is not uncommon.</td>
-                            <td class="text-center">
-                                <video width="320" height="240" controls>
-                                    <source src="resources/dataset/video/15_34.mp4" type="video/mp4">
-                                </video>
-                            </td>
-                            <td class="text-center">
-                                <video width="320" height="240" controls>
-                                    <source src="resources/dataset/lip/15_34.mp4" type="video/mp4">
-                                </video>
-                            </td>
-                            <td class="text-center">
-                                <audio controls src="resources/dataset/nams/15_34.wav"></audio>
-                            </td>
-                            <td class="text-center">
-                                <audio controls src="resources/dataset/whisper/15_34.wav"></audio>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td> gate to the last was the debtors' prison for freemen of the city of London.</td>
-                            <td class="text-center">
-                                <video width="320" height="240" controls>
-                                    <source src="resources/dataset/video/s2_13_1.mp4" type="video/mp4">
-                                </video>
-                            </td>
-                            <td class="text-center">
-                                <video width="320" height="240" controls>
-                                    <source src="resources/dataset/lip/s2_13_1.mp4" type="video/mp4">
-                                </video>
-                            </td>
-                            <td class="text-center">
-                                <audio controls src="resources/dataset/nams/s2_13_1.wav"></audio>
-                            </td>
-                            <td class="text-center">
-                                <audio controls src="resources/dataset/whisper/s2_13_1.wav"></audio>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td> In England about this time, an attempt was made.</td>
-                            <td class="text-center">
-                                <video width="320" height="240" controls>
-                                    <source src="resources/dataset/video/s2_2_36.mp4" type="video/mp4">
-                                </video>
-                            </td>
-                            <td class="text-center">
-                                <video width="320" height="240" controls>
-                                    <source src="resources/dataset/lip/s2_2_36.mp4" type="video/mp4">
-                                </video>
-                            </td>
-                            <td class="text-center">
-                                <audio controls src="resources/dataset/nams/s2_2_36.wav"></audio>
-                            </td>
-                            <td class="text-center">
-                                <audio controls src="resources/dataset/whisper/s2_2_36.wav"></audio>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+        <div class="row">
+            <h3>Samples from our proposed dataset.</h3>
+        </div>
+        <div class="row d-flex table-responsive overflow-auto">
+            <table class="table table-bordered m-3">
+                <thead>
+                    <tr>
+                        <th class="text-center">Text</th>
+                        <th class="text-center">Video</th>
+                        <th class="text-center">Lip Video</th>
+                        <th class="text-center">NAM</th>
+                        <th class="text-center">Whisper</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> they could, when they exerted themselves, make among them about twelve pounds of pins in a day.</td>
+                        <td class="text-center">
+                            <video width="320" height="240" controls>
+                                <source src="resources/dataset/video/3_26.mp4" type="video/mp4">
+                            </video>
+                        </td>
+                        <td class="text-center">
+                            <video width="320" height="240" controls>
+                                <source src="resources/dataset/lip/3_26.mp4" type="video/mp4">
+                            </video>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/dataset/nams/3_26.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/dataset/whisper/3_26.wav"></audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> and there is at this day a village in Scotland, where it is not uncommon.</td>
+                        <td class="text-center">
+                            <video width="320" height="240" controls>
+                                <source src="resources/dataset/video/15_34.mp4" type="video/mp4">
+                            </video>
+                        </td>
+                        <td class="text-center">
+                            <video width="320" height="240" controls>
+                                <source src="resources/dataset/lip/15_34.mp4" type="video/mp4">
+                            </video>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/dataset/nams/15_34.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/dataset/whisper/15_34.wav"></audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> gate to the last was the debtors' prison for freemen of the city of London.</td>
+                        <td class="text-center">
+                            <video width="320" height="240" controls>
+                                <source src="resources/dataset/video/s2_13_1.mp4" type="video/mp4">
+                            </video>
+                        </td>
+                        <td class="text-center">
+                            <video width="320" height="240" controls>
+                                <source src="resources/dataset/lip/s2_13_1.mp4" type="video/mp4">
+                            </video>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/dataset/nams/s2_13_1.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/dataset/whisper/s2_13_1.wav"></audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> In England about this time, an attempt was made.</td>
+                        <td class="text-center">
+                            <video width="320" height="240" controls>
+                                <source src="resources/dataset/video/s2_2_36.mp4" type="video/mp4">
+                            </video>
+                        </td>
+                        <td class="text-center">
+                            <video width="320" height="240" controls>
+                                <source src="resources/dataset/lip/s2_2_36.mp4" type="video/mp4">
+                            </video>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/dataset/nams/s2_2_36.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/dataset/whisper/s2_2_36.wav"></audio>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
         <div class="d-block p-4">
