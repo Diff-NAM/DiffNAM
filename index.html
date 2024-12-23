@@ -240,7 +240,7 @@
                             <th class="text-center">Ground-truth Text</th>
                             <th class="text-center">Input Whisper Speech (WER: 1.07)</th>
                             <th class="text-center">HuBERT-Hifi (WER: 23.77)</th>
-                            <th class="text-center">MFA-TTS (WER: 41.07)</th>
+                            <th class="text-center">MFA-TTS (Modalities used: NAM & text) (WER: 41.07)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -297,8 +297,8 @@
                         <tr>
                             <th class="text-center">Ground-Truth Text</th>
                             <th class="text-center">Input Whisper Speech (WER ~ 5.54 - 12.97)</th>
-                            <th class="text-center">Pre-Trained HuBERT and Vocoder (WER ~ 84.53 - 100.14)</th>
-                            <th class="text-center">Whisper and Text Aligned with Aligner and TTS Synthesized (WER ~ 5.84 - 11.23)</th>
+                            <th class="text-center">HuBERT-Hifi (WER ~ 84.53 - 100.14)</th>
+                            <th class="text-center">MFA-TTS (Modalities used: NAM & text) (WER ~ 5.84 - 11.23)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -372,9 +372,9 @@
                         <tr>
                             <th class="text-center">Ground-truth text</th>
                             <th class="text-center">Input NAM vibrations (WER ~ 192.77 - 200.50)</th>
-                            <th class="text-center">NAM and text aligned with aligner and TTS synthesized (Modalities used: NAM & text) (Both speaker samples for training) (WER: 12.37 - 19.64)</th>
+                            <th class="text-center">MFA-TTS (Modalities used: NAM & text) (Both speaker samples for training) (WER: 12.37 - 19.64)</th>
                             <th class="text-center">DiffNAM (Modalities used: Lip, NAM & text) (WER: 17.23 - 21.73)</th>
-                            <th class="text-center">NAM and text aligned with aligner and TTS synthesized (Modalities used: NAM & text) (speaker-specific training) (WER: 23.81 - 33.62)</th>
+                            <th class="text-center">MFA-TTS (Modalities used: NAM & text) (speaker-specific training) (WER: 23.81 - 33.62)</th>
                             <th class="text-center">LipVoicer with ground-truth text in inference (Modalities used: Lip & text) (WER: 27.01 - 33.94)</th>
                             <th class="text-center">LipVoicer with predicted text in inference (Modalities used: Lip & text) (WER: 39.04 - 49.99)</th>
                             <th class="text-center">Cross-Attention (Modalities used: Lip & text) (WER: 62.13 - 67.54)</th>
@@ -493,8 +493,8 @@
                         <tr>
                             <th class="text-center">Ground-truth text</th>
                             <th class="text-center">Input NAM vibrations (WER ~ 192.77 - 200.50)</th>
-                            <th class="text-center">Method: Whisper and text aligned with aligner and TTS synthesized (WER ~ 15.21 - 25.69)</th>
-                            <th class="text-center">Method: NAM and text aligned with aligner and TTS synthesized (WER ~ 26.38 - 32.61)</th>
+                            <th class="text-center">Method: MFA-TTS (Whisper and text aligned) (WER ~ 15.21 - 25.69)</th>
+                            <th class="text-center">Method: MFA-TTS (NAM and text aligned) (WER ~ 26.38 - 32.61)</th>
                             <th class="text-center">Method: DiffNAM (WER ~ 32.39 - 38.94)</th>
                             <th class="text-center">Method: LipVoicer (ground-truth text) (WER ~ 54.11 - 59.66)</th>
                             <th class="text-center">Method: LipVoicer (predicted text) (WER ~ 74.51 - 79.46)</th>
