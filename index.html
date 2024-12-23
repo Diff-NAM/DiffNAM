@@ -229,6 +229,9 @@
             <div class="row p-5"></div>
             <div class="row">
                 <h3>R1: Simulated ground-truth speech using Whisper speech and text as input for CSTR NAM TIMIT Plus corpus</h3>
+                <p>Note: The <strong>HuBERT-Hifi</strong> method follows from the paper: N. Shah, S. Karande, and V. Gandhi, “Towards improving nam-to-speech synthesis intelligibility using self-supervised speech models,” in Interspeech 2024, 2024, pp. 2470–2474.</p>
+                <p>The <strong>MFA-TTS</strong> method follows from the paper: N. Shah, N. Sahipjohn, V. Tambrahalli, R. Subramanian, and V. Gandhi, “Stethospeech: Speech generation through a clinical stethoscope attached to the skin,” Proc. ACM Interact. Mob. Wearable Ubiquitous Technol., vol. 8, no. 3, Sep. 2024. [Online]. Available: https://doi.org/10.1145/3678515</p>
+
             </div>
             <div class="row d-flex table-responsive overflow-auto">
                 <table class="table table-bordered m-3">
@@ -236,8 +239,8 @@
                         <tr>
                             <th class="text-center">Ground-truth Text</th>
                             <th class="text-center">Input Whisper Speech (WER: 1.07)</th>
-                            <th class="text-center">Pre-trained HuBERT and Vocoder (WER: 23.77)</th>
-                            <th class="text-center">Whisper + Text Aligned (Aligner) + TTS (WER: 41.07)</th>
+                            <th class="text-center">HuBERT-Hifi (WER: 23.77)</th>
+                            <th class="text-center">MFA-TTS (WER: 41.07)</th>
                         </tr>
                     </thead>
                     <tbody>
